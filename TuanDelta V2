@@ -1,0 +1,31 @@
+local myKey = "TuanDeltaKey"
+local thescript = [[
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/pokelok/Farinhahubpro/main/main"))()
+]]
+
+local function LoginScript()
+    local script = Instance.new('LocalScript', Login)
+    local button = script.Parent
+    local keyBox = script.Parent.Parent:WaitForChild("KeyHere") -- TextBox nhập key
+
+    local notify = function(title, description, duration)
+        duration = duration or 5
+        game:GetService("StarterGui"):SetCore("SendNotification", {
+            Title = tostring(title),
+            Text = tostring(description),
+            Duration = tonumber(duration)
+        })
+    end
+
+    button.MouseButton1Down:Connect(function()
+        if keyBox.Text == myKey then
+            notify("TuanDelta Hub V2", "Key đúng rồi , hẹ hẹ!", 3)
+            loadstring(thescript)()  -- chạy script
+            script.Parent.Parent.Parent:Destroy()  -- đóng GUI
+        else
+            notify("TuanDelta Hub V2", "", 4)
+        end
+    end)
+end
+
+coroutine.wrap(LoginScript)()

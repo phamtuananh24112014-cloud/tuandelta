@@ -1,53 +1,104 @@
-local function createGUI()
+local Players = game:GetService("Players")
+local TweenService = game:GetService("TweenService")
+local RunService = game:GetService("RunService")
 
-    local oldGui = player.PlayerGui:FindFirstChild("TuanMM2Fram")
+local player = Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+
+local teleportEnabled = false
+local isTeleporting = false
+
+-- Find the CoinContainer in workspace
+local function findCoinContainer()
+    for _, child in pairs(workspace:GetChildren()) do
+        local container = child:FindFirstChild("CoinContainer")
+        if container then
+            return container
+        end
+    end
+    return nil
+end
+
+-- Find nearest coin within a certain radius
+local function findNearestCoin(radius)
+    local coinContainer = findCoinContainer()
+    if not coinContainer then return nil end
+    local hrp = character:WaitForChild("HumanoidRootPart")
+    local nearestCoin = nil
+    local nearestDistance = radius
+    for _, coin in pairs(coinContainer:GetChildren()) do
+        local distance = (coin.Position - hrp.Position).Magnitude
+        if distance < nearestDistance then
+            nearestCoin = coin
+            nearestDistance = distance
+        end
+    end
+    return nearestCoin
+end
+
+-- Teleport to a coin using Tween
+local function teleportToCoin(coin)
+    local hrp = character:WaitForChild("HumanoidRootPart")
+    local tweenInfo = TweenInfo.new(0.5, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+    local tween = TweenService:Create(hrp, tweenInfo, {CFrame = coin.CFrame})
+    tween:Play()
+    return tween
+end
+
+-- Teleport logic
+local function teleportToNearbyOrRandomCoin()
+    if not teleportEnabled or isTeleporting then return end
+    local nearbyRadius = 50
+    local coin = findNearestCoin(nearbyRadius)
+    local coinContainer = findCoinContainer()
+    if not coinContainer then return end
+    local coins = coinContainer:GetChildren()
+    if #coins == 0 then return end
+    local targetCoin = coin or coins[math.random(1, #coins)]
+    isTeleporting = true
+    local tween = teleportToCoin(targetCoin)
+    tween.Completed:Wait()
+    isTeleporting = false
+end
+
+-- Create GUI
+local function createGUI()
+    local oldGui = player.PlayerGui:FindFirstChild("CoinCollectorGUI")
     if oldGui then oldGui:Destroy() end
 
     local ScreenGui = Instance.new("ScreenGui")
-    ScreenGui.Name = "TuanMM2Fram"
+    ScreenGui.Name = "CoinCollectorGUI"
     ScreenGui.ResetOnSpawn = false
     ScreenGui.Parent = player.PlayerGui
 
-    local Background = Instance.new("ImageLabel")
-    Background.Size = UDim2.new(0, 250, 0, 250)
-    Background.Position = UDim2.new(0.5, -125, 0.5, -125)
-    Background.BackgroundTransparency = 1
-    Background.Image = "rbxassetid://101594287578142" -- hình nền mờ
-    Background.ImageColor3 = Color3.fromRGB(255, 255, 255)
-    Background.ImageTransparency = 0.7 -- mờ
-    Background.Parent = ScreenGui
+    local Frame = Instance.new("Frame")
+    Frame.Size = UDim2.new(0, 200, 0, 120)
+    Frame.Position = UDim2.new(0.5, -100, 0.5, -60)
+    Frame.BackgroundColor3 = Color3.fromRGB(40, 40, 40)
+    Frame.BorderSizePixel = 0
+    Frame.Active = true
+    Frame.Draggable = true
+    Frame.Parent = ScreenGui
 
-    local Diamond = Instance.new("ImageLabel")
-    Diamond.Size = UDim2.new(0, 200, 0, 200)
-    Diamond.Position = UDim2.new(0.5, -100, 0.5, -100)
-    Diamond.BackgroundTransparency = 1
-    Diamond.Image = "rbxassetid://6023426923"
-    Diamond.ImageColor3 = Color3.fromRGB(50, 50, 50)
-    Diamond.Parent = ScreenGui
-    Diamond.Active = true
-    Diamond.Draggable = true
-
-    -- Title Text
     local Title = Instance.new("TextLabel")
-    Title.Size = UDim2.new(1, 0, 0, 40)
-    Title.Position = UDim2.new(0, 0, 0.25, 0)
+    Title.Size = UDim2.new(1, 0, 0, 30)
+    Title.Position = UDim2.new(0, 0, 0, 0)
     Title.BackgroundTransparency = 1
-    Title.Text = "TuanMM2Fram"
+    Title.Text = "Coin Collector"
     Title.TextColor3 = Color3.new(1, 1, 1)
     Title.TextSize = 18
     Title.Font = Enum.Font.SourceSansBold
-    Title.Parent = Diamond
+    Title.Parent = Frame
 
-    -- Toggle button
     local ToggleButton = Instance.new("TextButton")
-    ToggleButton.Size = UDim2.new(0.6, 0, 0, 40)
-    ToggleButton.Position = UDim2.new(0.2, 0, 0.55, 0)
+    ToggleButton.Size = UDim2.new(0.8, 0, 0, 40)
+    ToggleButton.Position = UDim2.new(0.1, 0, 0.5, 0)
     ToggleButton.BackgroundColor3 = Color3.fromRGB(200, 0, 0)
     ToggleButton.Text = "Teleport OFF"
     ToggleButton.TextColor3 = Color3.new(1, 1, 1)
     ToggleButton.TextSize = 14
     ToggleButton.Font = Enum.Font.SourceSansBold
-    ToggleButton.Parent = Diamond
+    ToggleButton.Parent = Frame
 
     ToggleButton.MouseButton1Click:Connect(function()
         teleportEnabled = not teleportEnabled
@@ -62,3 +113,23 @@ local function createGUI()
 
     return ScreenGui
 end
+
+-- Initialize GUI
+local gui = createGUI()
+
+-- Handle character respawn
+player.CharacterAdded:Connect(function(newChar)
+    character = newChar
+    if not player.PlayerGui:FindFirstChild("CoinCollectorGUI") then
+        gui = createGUI()
+    end
+end)
+
+-- Continuous teleport loop
+RunService.Heartbeat:Connect(function()
+    if teleportEnabled and character and character:FindFirstChild("HumanoidRootPart") then
+        teleportToNearbyOrRandomCoin()
+    end
+end)
+
+print("Coin Collector script loaded!")

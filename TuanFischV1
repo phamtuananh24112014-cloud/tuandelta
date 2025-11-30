@@ -9,7 +9,7 @@ local Window = Fluent:CreateWindow({
     TabWidth = 160,
     Size = UDim2.fromOffset(580, 340),
     Acrylic = true,
-    Theme = "Aqua",
+    Theme = "White",
     MinimizeKey = Enum.KeyCode.LeftAlt
 })
 
@@ -33,29 +33,21 @@ local Checkkey = Tabs.KeySys:AddButton({
     Title = "Check Key",
     Description = "Enter Key before pressing this button",
     Callback = function()
-        local response = KeyGuardLibrary.validateDefaultKey(key)
-        if response == trueData then
-           print("Key is valid")
-           loadstring(game:HttpGet("https://raw.githubusercontent.com/miIfhunter/Sandra/refs/heads/main/games"))()
+        if key == KEY then
+            print("Key is valid")
+            loadstring(game:HttpGet("https://raw.githubusercontent.com/phamtuananh24112014-cloud/tuandelta/refs/heads/main/TuanFischV1"))()
         else
-           print("Key is invalid")
+            print("Key sai rồi hẹ hẹ")
         end
     end
 })
 
 local GetDiscord = Tabs.KeySys:AddButton({
-    Title = "Get Key",
-    Description = "Get Key here",
-    Callback = function()
-       setclipboard(KeyGuardLibrary.getLink())
-    end
-})
-
-local GetDiscord = Tabs.KeySys:AddButton({
     Title = "Get Key on Discord",
-    Description = "How to get the key",
+    Description = "Copy Discord link to get the key",
     Callback = function()
         setclipboard("https://discord.gg/qus6dfqw")
     end
 })
+
 Window:SelectTab(1)

@@ -39,12 +39,12 @@ end
 -- Teleport tới coin với Tween nhanh hơn
 local function teleportToCoin(coin)
     local hrp = character:WaitForChild("HumanoidRootPart")
+    local targetCFrame = CFrame.new(coin.Position + Vector3.new(0, 5, 0))
     local tweenInfo = TweenInfo.new(0.05, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
-    local tween = TweenService:Create(hrp, tweenInfo, {CFrame = coin.CFrame})
+    local tween = TweenService:Create(hrp, tweenInfo, {CFrame = targetCFrame})
     tween:Play()
     return tween
 end
-
 -- Teleport logic
 local function teleportToNearbyOrRandomCoin()
     if not teleportEnabled or isTeleporting then return end

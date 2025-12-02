@@ -6,12 +6,12 @@ local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Presi
 
 MakeWindow({
   Hub = {
-    Title = "President Zuyi Official Hub (¥)",
+    Title = "Chủ Tịch TuanDelta (¥)",
     Animation = "Enjoy!🔥👀"
   },
   Key = {
     KeySystem = true,
-    Title = "TuanDelta 😉🐐",
+    Title = "By TuanDelta | bản Việt Hoá 35% 😉🐐",
     Description = "^ Blue Lock Rivals (Updated)^",
     KeyLink = "https://discord.gg/FpwSKH9h",
     Keys = {"TuanDelta", "71838", "28282", "1", "28282"},
@@ -25,7 +25,7 @@ CopyKeyLink = "Đã sao chép liên kết Discord"
 })
 
 MinimizeButton({
-  Image = "rbxassetid://103775574267750",
+  Image = "rbxassetid://96811249672265",
   Size = {40, 40},
   Color = Color3.fromRGB(10, 10, 10),
   Corner = true,
@@ -43,7 +43,7 @@ local Main = MakeTab({Name = "INFO"})
 
 local Image = AddImageLabel(Main, {
   Name = "nguời sở hữu TuanDelta",
-  Image = "rbxassetid://103775574267750"
+  Image = "rbxassetid://96811249672265"
 })
 local Paragraph1 = AddParagraph(Main, {"Hub Blue Lock Của TuanDelta ✅", "CREDIT"})
 local Paragraph3 = AddParagraph(Main, {"Vào Nhóm Discord để được hỗ trợ😤"})
@@ -94,7 +94,7 @@ local Important = MakeTab({Name = "Zuyis Portal😜"})
 
 local Image = AddImageLabel(Important, {
   Name = "Chủ Tịch TuanDelta🔗",
-  Image = "rbxassetid://7229442422"
+  Image = "rbxassetid://96811249672265"
 })
 AddButton(Important, {
   Name = "😵‍💫 Không Giới Hạn Thời Gian Kỹ Năng",
@@ -108,8 +108,8 @@ AddButton(Important, {
     game:GetService("StarterGui"):SetCore("SendNotification", {
       Title = "Tham gia Hub PresidentZuyi để cập nhật!",
       Text = "Script Không Giới Hạn Kỹ Năng Hoàn Thành ✅",
-      Button1 = "W Zuyi!",
-      Button2 = "W Zuyi!",
+      Button1 = "W TuanDelta",
+      Button2 = "W TuanDelta",
       Duration = 90
     })
   end
@@ -123,8 +123,8 @@ AddButton(Important, {
     game:GetService("StarterGui"):SetCore("SendNotification", {
       Title = "Tham gia Hub PresidentZuyi để cập nhật!",
       Text = "Script Mở Rộng Thủ Môn Hoàn Thành ✅",
-      Button1 = "W Zuyi!",
-      Button2 = "W Zuyi!",
+      Button1 = "W TuanDelta",
+      Button2 = "W TuanDelta",
       Duration = 90
     })
   end
@@ -135,7 +135,7 @@ AddButton(NewCosmetics, {
     cloneref(game:GetService("ReplicatedStorage")).Packages.Knit.Services.CustomizationService.RE.Customize:FireServer("Cosmetics", "Zodiac")
 
     game:GetService("StarterGui"):SetCore("SendNotification", {
-      Title = "Tham gia Hub PresidentZuyi để cập nhật!",
+      Title = "Tham gia Discord TuanDelta để cập nhật!",
       Text = "Hào Quang Hoàng Đạo Hoàn Thành ✅",
       Button1 = "W TuanDelta!",
       Button2 = "W TuanDelta!",

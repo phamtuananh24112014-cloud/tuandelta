@@ -1,0 +1,1843 @@
+local players = game:GetService("Players")
+local player = players.LocalPlayer
+local teams = game:GetService("Teams")
+local replicatedStorage = game:GetService("ReplicatedStorage")
+local library = loadstring(game:HttpGet("https://raw.githubusercontent.com/PresidentZuyi/S/refs/heads/main/C"))()
+
+MakeWindow({
+  Hub = {
+    Title = "President Zuyi Official Hub (¥)",
+    Animation = "Enjoy!🔥👀"
+  },
+  Key = {
+    KeySystem = true,
+    Title = "TuanDelta 😉🐐",
+    Description = "^ Blue Lock Rivals (Updated)^",
+    KeyLink = "https://discord.gg/FpwSKH9h",
+    Keys = {"TuanDelta", "71838", "28282", "1", "28282"},
+    Notifi = {
+      Notifications = true,
+     CorrectKey = "Đúng rồi! ✅",
+Incorrectkey = "Sai rồi! 😡‼️",
+CopyKeyLink = "Đã sao chép liên kết Discord"
+    }
+  }
+})
+
+MinimizeButton({
+  Image = "rbxassetid://103775574267750",
+  Size = {40, 40},
+  Color = Color3.fromRGB(10, 10, 10),
+  Corner = true,
+  Stroke = true,
+  StrokeColor = Color3.fromHSV(0.5, 1, 1)  -- Hue: 180° for cyan
+})
+
+MakeNotifi({
+  Title = "Đã Chạy Xong rồi😇",
+  Text = "Thành công HeHe boi ✅"",
+  Time = 5
+})
+
+local Main = MakeTab({Name = "INFO"})
+
+local Image = AddImageLabel(Main, {
+  Name = "nguời sở hữu TuanDelta",
+  Image = "rbxassetid://103775574267750"
+})
+local Paragraph1 = AddParagraph(Main, {"Hub Blue Lock Của TuanDelta ✅", "CREDIT"})
+local Paragraph3 = AddParagraph(Main, {"Vào Nhóm Discord để được hỗ trợ😤"})
+local Paragraph4 = AddParagraph(Main, {"TuanDelta Là Chủ Sở Hữu Script Này"})
+
+-- Auto
+local Main = MakeTab({Name = "Phong Cách Tùy Chỉnh‼️🔥"})
+
+AddButton(Main, { 
+  Name = "¥ Nhận Phong Cách Gojo Satoru 💙❤️", 
+  Description = "Sao bạn lại nhấn nút này ☠️!", 
+  Callback = function()
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/PresidentZuyi/H/refs/heads/main/B'))()
+  end
+}) 
+
+AddButton(Main, {
+  Name = "¥ Nhận Phong Cách Ego Jinpachi 🧠",
+  Callback = function()
+    local function runScript(url)
+      loadstring(game:HttpGet(url))()
+    end
+    
+    local co1 = coroutine.create(runScript)
+    local co2 = coroutine.create(runScript)
+    
+    coroutine.resume(co1, "https://raw.githubusercontent.com/PresidentZuyi/Shh/refs/heads/main/C")
+    coroutine.resume(co2, "https://raw.githubusercontent.com/PresidentZuyi/Shh/refs/heads/main/F")
+  end
+})
+
+AddButton(Main, {
+  Name = "¥ Nhận Phong Cách Igaguri Gurimu 🕉️",
+  Callback = function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/PresidentZuyi/Hi/refs/heads/main/Chh"))()
+  end
+})
+
+AddButton(Main, {
+  Name = "¥ Lavinho The Dribbler Sắp Ra Mắt! ✅",
+  Callback = function()
+    -- No action needed for this button
+  end
+})
+
+-- Rename Read section to Important and add the buttons
+local Important = MakeTab({Name = "Zuyis Portal😜"})
+
+local Image = AddImageLabel(Important, {
+  Name = "Chủ Tịch TuanDelta🔗",
+  Image = "rbxassetid://7229442422"
+})
+AddButton(Important, {
+  Name = "😵‍💫 Không Giới Hạn Thời Gian Kỹ Năng",
+  Callback = function()
+    local AbilityController = require(cloneref(game:GetService("ReplicatedStorage")).Controllers.AbilityController)
+    local OriginalAbilityCooldown; 
+    OriginalAbilityCooldown = hookfunction(AbilityController.AbilityCooldown, function(Self)
+      return
+    end)
+
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+      Title = "Tham gia Hub PresidentZuyi để cập nhật!",
+      Text = "Script Không Giới Hạn Kỹ Năng Hoàn Thành ✅",
+      Button1 = "W Zuyi!",
+      Button2 = "W Zuyi!",
+      Duration = 90
+    })
+  end
+})
+
+AddButton(Important, {
+  Name = "Mở Rộng Bóng Thủ Môn ⚽️",
+  Callback = function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/T5m4nwPq"))()
+
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+      Title = "Tham gia Hub PresidentZuyi để cập nhật!",
+      Text = "Script Mở Rộng Thủ Môn Hoàn Thành ✅",
+      Button1 = "W Zuyi!",
+      Button2 = "W Zuyi!",
+      Duration = 90
+    })
+  end
+})
+AddButton(NewCosmetics, {
+  Name = "¥ Hào Quang Hoàng Đạo Mới 👀",
+  Callback = function()
+    cloneref(game:GetService("ReplicatedStorage")).Packages.Knit.Services.CustomizationService.RE.Customize:FireServer("Cosmetics", "Zodiac")
+
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+      Title = "Tham gia Hub PresidentZuyi để cập nhật!",
+      Text = "Hào Quang Hoàng Đạo Hoàn Thành ✅",
+      Button1 = "W TuanDelta!",
+      Button2 = "W TuanDelta!",
+      Duration = 90
+    })
+  end
+})
+
+AddButton(NewCosmetics, {
+  Name = "¥ Áo Choàng Rồng",
+  Callback = function()
+    cloneref(game:GetService("ReplicatedStorage")).Packages.Knit.Services.CustomizationService.RE.Customize:FireServer("Cosmetics", "Dragon Cape")
+
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+      Title = "Tham gia Hub PresidentZuyi để cập nhật!",
+      Text = "Áo Choàng Rồng Hoàn Thành ✅",
+      Button1 = "W TuanDelta!",
+      Button2 = "W TuanDelta!",
+      Duration = 90
+    })
+  end
+})
+
+AddButton(NewCosmetics, {
+  Name = "¥ Gương Mặt Vàng Mới",
+  Callback = function()
+    cloneref(game:GetService("ReplicatedStorage")).Packages.Knit.Services.CustomizationService.RE.Customize:FireServer("Cosmetics", "Golden Grills")
+
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+      Title = "Tham gia Hub PresidentZuyi để cập nhật!",
+      Text = "Gương Mặt Vàng Hoàn Thành ✅",
+      Button1 = "W TuanDelta!",
+      Button2 = "W TuanDelta!",
+      Duration = 90
+    })
+  end
+})
+
+AddButton(NewCosmetics, {
+  Name = "¥ Hào Quang Valentine",
+  Callback = function()
+    cloneref(game:GetService("ReplicatedStorage")).Packages.Knit.Services.CustomizationService.RE.Customize:FireServer("Cosmetics", "Valentines")
+
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+      Title = "Tham gia Hub PresidentZuyi để cập nhật!",
+      Text = "Hào Quang Valentine Hoàn Thành ✅",
+      Button1 = "W TuanDelta!",
+      Button2 = "W TuanDelta!",
+      Duration = 90
+    })
+  end
+})
+
+-- Phần New Goal Effects
+local NewGoalEffects = MakeTab({Name = "Hiệu Ứng Ghi Bàn Mới 🤑"})
+
+local Paragraph1 = AddParagraph(NewGoalEffects, {"Đây là nơi sẽ chứa tất cả hiệu ứng ghi bàn mới"})
+
+AddButton(NewGoalEffects, {
+  Name = "¥ Hiệu Ứng Ghi Bàn Grillz",
+  Callback = function()
+    cloneref(game:GetService("ReplicatedStorage")).Packages.Knit.Services.CustomizationService.RE.Customize:FireServer("GoalEffects", "Grillz")
+
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+      Title = "Tham gia Hub PresidentZuyi để cập nhật!",
+      Text = "Hiệu Ứng Ghi Bàn Grillz Hoàn Thành ✅",
+      Button1 = "W TuanDelta!",
+      Button2 = "W TuanDelta!",
+      Duration = 90
+    })
+  end
+})
+
+AddButton(NewGoalEffects, {
+  Name = "¥ Hiệu Ứng Ghi Bàn Timestop",
+  Callback = function()
+    cloneref(game:GetService("ReplicatedStorage")).Packages.Knit.Services.CustomizationService.RE.Customize:FireServer("GoalEffects", "Time Stop")
+
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+      Title = "Tham gia Hub PresidentZuyi để cập nhật!",
+      Text = "Hiệu Ứng Ghi Bàn Timestop Hoàn Thành ✅",
+      Button1 = "W TuanDelta!",
+      Button2 = "W TuanDelta!",
+      Duration = 90
+    })
+  end
+})
+
+AddButton(NewGoalEffects, {
+  Name = "¥ Hiệu Ứng Ghi Bàn Vaporwave",
+  Callback = function()
+    cloneref(game:GetService("ReplicatedStorage")).Packages.Knit.Services.CustomizationService.RE.Customize:FireServer("GoalEffects", "Vaporwave")
+
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+      Title = "Tham gia Hub PresidentZuyi để cập nhật!",
+      Text = "Hiệu Ứng Ghi Bàn Vaporwave Hoàn Thành ✅",
+      Button1 = "W TuanDelta!",
+      Button2 = "W TuanDelta!",
+      Duration = 90
+    })
+  end
+})
+
+AddButton(NewGoalEffects, {
+  Name = "¥ Hiệu Ứng Ghi Bàn Nghĩa Địa",
+  Callback = function()
+    cloneref(game:GetService("ReplicatedStorage")).Packages.Knit.Services.CustomizationService.RE.Customize:FireServer("GoalEffects", "GRAVEYARD")
+
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+      Title = "Tham gia Hub PresidentZuyi để cập nhật!",
+      Text = "Hiệu Ứng Ghi Bàn Nghĩa Địa Hoàn Thành ✅",
+      Button1 = "W TuanDelta!",
+      Button2 = "W TuanDelta!",
+      Duration = 90
+    })
+  end
+})
+
+AddButton(NewGoalEffects, {
+  Name = "¥ Hiệu Ứng Ghi Bàn Chinh Phục",
+  Callback = function()
+    cloneref(game:GetService("ReplicatedStorage")).Packages.Knit.Services.CustomizationService.RE.Customize:FireServer("GoalEffects", "Conquer")
+
+    game:GetService("StarterGui"):SetCore("SendNotification", {
+      Title = "Tham gia Hub PresidentZuyi để cập nhật!",
+      Text = "Hiệu Ứng Ghi Bàn Chinh Phục Hoàn Thành ✅",
+      Button1 = "W TuanDelta!",
+      Button2 = "W TuanDelta!",
+      Duration = 90
+    })
+  end
+})
+
+-- Phần Emotes mới
+local AnimeEmotes = MakeTab({Name = "Emotes Anime 🔥"})
+local ToxicEmotes = MakeTab({Name = "Emotes Độc 😡"})
+local OtherEmotes = MakeTab({Name = "Emotes Khác 😉"})
+
+AddParagraph(AnimeEmotes, {"Đây là nơi sẽ thêm tất cả Emotes Anime"})
+AddParagraph(ToxicEmotes, {"Đây là nơi sẽ thêm tất cả Emotes Độc"})
+AddParagraph(OtherEmotes, {"Đây là nơi sẽ thêm tất cả Emotes Khác"})
+
+-- Hàm chuẩn để tạo GUI emote
+local function CreateEmoteButton(player, animationId, buttonText)
+    local function cleanup()
+        if player.PlayerGui:FindFirstChild("PlayEmoteGUI") then
+            player.PlayerGui:FindFirstChild("PlayEmoteGUI"):Destroy()
+        end
+    end
+
+    local function initializeAbility()
+        local character = player.Character or player.CharacterAdded:Wait()
+        local humanoid = character:WaitForChild("Humanoid")
+        local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+        local animation = Instance.new("Animation")
+        animation.AnimationId = animationId
+        local animationTrack = humanoid:LoadAnimation(animation)
+        animationTrack.Priority = Enum.AnimationPriority.Action
+
+        local sound = Instance.new("Sound")
+        sound.SoundId = "" -- Thêm Sound ID nếu muốn
+        sound.Parent = humanoidRootPart
+
+        local function triggerAbility()
+            sound:Play()
+            animationTrack:Play(0.1, 1, 1)
+            task.delay(3, function()
+                animationTrack:Stop(0.1)
+            end)
+        end
+
+        local screenGui = Instance.new("ScreenGui")
+        screenGui.Name = "PlayEmoteGUI"
+        screenGui.Parent = player.PlayerGui
+
+        local button = Instance.new("TextButton")
+        button.Size = UDim2.new(0, 150, 0, 30)
+        button.Position = UDim2.new(0.5, -75, 0.5, -15)
+        button.BackgroundColor3 = Color3.new(0, 0, 0)
+        button.TextColor3 = Color3.new(1, 1, 1)
+        button.Text = buttonText
+        button.Parent = screenGui
+
+        -- Kéo thả GUI
+        local dragging, dragInput, dragStart, startPos
+        local function update(input)
+            local delta = input.Position - dragStart
+            button.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+        end
+
+        button.InputBegan:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+                dragging = true
+                dragStart = input.Position
+                startPos = button.Position
+                input.Changed:Connect(function()
+                    if input.UserInputState == Enum.UserInputState.End then
+                        dragging = false
+                    end
+                end)
+            end
+        end)
+
+        button.InputChanged:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+                dragInput = input
+            end
+        end)
+
+        game:GetService("UserInputService").InputChanged:Connect(function(input)
+            if input == dragInput and dragging then
+                update(input)
+            end
+        end)
+
+        button.MouseButton1Click:Connect(triggerAbility)
+    end
+
+    player.CharacterAdded:Connect(function()
+        cleanup()
+        initializeAbility()
+    end)
+
+    cleanup()
+    if player.Character then
+        initializeAbility()
+    end
+end
+
+-- Thêm Emotes Độc
+local player = game.Players.LocalPlayer
+
+AddButton(ToxicEmotes, {
+    Name = "¥ Toxic Laugh",
+    Callback = function()
+        CreateEmoteButton(player, "rbxassetid://117834213273979", "Toxic Laugh By TuanDelta")
+    end
+})
+
+AddButton(ToxicEmotes, {
+    Name = "¥ Toxic L Dance",
+    Callback = function()
+        CreateEmoteButton(player, "rbxassetid://105830694875557", "Toxic L Dance By TuanDelta")
+    end
+})
+
+AddButton(ToxicEmotes, {
+    Name = "¥ Toxic Ninja Run Dance",
+    Callback = function()
+        CreateEmoteButton(player, "rbxassetid://72224249513625", "Toxic Ninja Run By TuanDelta")
+    end
+})
+
+
+        -- Create the GUI button
+        local screenGui = Instance.new("ScreenGui")
+        screenGui.Name = "PlayEmoteGUI"
+        screenGui.Parent = player.PlayerGui
+
+        local button = Instance.new("TextButton")
+        button.Size = UDim2.new(0, 150, 0, 30)
+        button.Position = UDim2.new(0.5, -75, 0.5, -15)
+        button.BackgroundColor3 = Color3.new(0, 0, 0)
+        button.TextColor3 = Color3.new(1, 1, 1)
+        button.Text = "Toxic Ninja Run Dance Zuyi"
+        button.Parent = screenGui
+
+        -- Make the GUI draggable
+        local dragging
+        local dragInput
+        local dragStart
+        local startPos
+
+        local function update(input)
+            local delta = input.Position - dragStart
+            button.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+        end
+
+        button.InputBegan:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+                dragging = true
+                dragStart = input.Position
+                startPos = button.Position
+
+                input.Changed:Connect(function()
+                    if input.UserInputState == Enum.UserInputState.End then
+                        dragging = false
+                    end
+                end)
+            end
+        end)
+
+        button.InputChanged:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+                dragInput = input
+            end
+        end)
+
+        game:GetService("UserInputService").InputChanged:Connect(function(input)
+            if input == dragInput and dragging then
+                update(input)
+            end
+        end)
+
+        -- Listen for the button activation (when clicked)
+        button.MouseButton1Click:Connect(function()
+            -- Trigger the ability when the button is clicked
+            triggerAbility()
+        end)
+    end
+
+    -- Reinitialize the ability each time the character is added (e.g., when joining a match)
+    player.CharacterAdded:Connect(function()
+        cleanup()
+        initializeAbility()
+    end)
+
+    -- Initial cleanup and ability initialization
+    cleanup()
+    if player.Character then
+        initializeAbility()
+    end
+  end
+})
+
+AddButton(ToxicEmotes, {
+  Name = "¥ Toxic Money Rain Dance Emote",
+  Callback = function()
+    local player = game.Players.LocalPlayer
+
+    local function cleanup()
+        -- Remove any existing GUI named "PlayEmoteGUI"
+        if player.PlayerGui:FindFirstChild("PlayEmoteGUI") then
+            player.PlayerGui:FindFirstChild("PlayEmoteGUI"):Destroy()
+        end
+    end
+
+    local function initializeAbility()
+        local character = player.Character or player.CharacterAdded:Wait()
+        local humanoid = character:WaitForChild("Humanoid")
+        local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+        -- The animation for the dribble/drive move
+        local animation = Instance.new("Animation")
+        animation.AnimationId = "rbxassetid://71762198316531"  -- Replace with your desired animation ID
+        local animationTrack = humanoid:LoadAnimation(animation)
+
+        -- Set the animation priority to Action to ensure it overrides the idle animation
+        animationTrack.Priority = Enum.AnimationPriority.Action
+
+        -- Sound for the move
+        local sound = Instance.new("Sound")
+        sound.SoundId = ""  -- Change the sound ID
+        sound.Parent = humanoidRootPart  -- You can attach the sound to the character's root part
+
+        -- Function to trigger the ability
+        local function triggerAbility()
+            -- Play the sound at the start of the move
+            sound:Play()
+
+            -- Start the animation immediately with smooth blending
+            animationTrack:Play(0.1, 1, 1)
+
+            -- Stop the animation after 3 seconds
+            task.delay(3, function()
+                animationTrack:Stop(0.1)
+            end)
+        end
+
+        -- Create the GUI button
+        local screenGui = Instance.new("ScreenGui")
+        screenGui.Name = "PlayEmoteGUI"
+        screenGui.Parent = player.PlayerGui
+
+        local button = Instance.new("TextButton")
+        button.Size = UDim2.new(0, 150, 0, 30)
+        button.Position = UDim2.new(0.5, -75, 0.5, -15)
+        button.BackgroundColor3 = Color3.new(0, 0, 0)
+        button.TextColor3 = Color3.new(1, 1, 1)
+        button.Text = "Money Rain Run Dance Zuyi"
+        button.Parent = screenGui
+
+        -- Make the GUI draggable
+        local dragging
+        local dragInput
+        local dragStart
+        local startPos
+
+        local function update(input)
+            local delta = input.Position - dragStart
+            button.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+        end
+
+        button.InputBegan:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+                dragging = true
+                dragStart = input.Position
+                startPos = button.Position
+
+                input.Changed:Connect(function()
+                    if input.UserInputState == Enum.UserInputState.End then
+                        dragging = false
+                    end
+                end)
+            end
+        end)
+
+        button.InputChanged:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+                dragInput = input
+            end
+        end)
+
+        game:GetService("UserInputService").InputChanged:Connect(function(input)
+            if input == dragInput and dragging then
+                update(input)
+            end
+        end)
+
+        -- Listen for the button activation (when clicked)
+        button.MouseButton1Click:Connect(function()
+            -- Trigger the ability when the button is clicked
+            triggerAbility()
+        end)
+    end
+
+    -- Reinitialize the ability each time the character is added (e.g., when joining a match)
+    player.CharacterAdded:Connect(function()
+        cleanup()
+        initializeAbility()
+    end)
+
+    -- Initial cleanup and ability initialization
+    cleanup()
+    if player.Character then
+        initializeAbility()
+    end
+  end
+})
+
+AddButton(AnimeEmotes, {
+  Name = "¥ Honoured One Anime Emote",
+  Callback = function()
+    local player = game.Players.LocalPlayer
+
+    local function cleanup()
+        -- Remove any existing GUI named "PlayEmoteGUI"
+        if player.PlayerGui:FindFirstChild("PlayEmoteGUI") then
+            player.PlayerGui:FindFirstChild("PlayEmoteGUI"):Destroy()
+        end
+    end
+
+    local function initializeAbility()
+        local character = player.Character or player.CharacterAdded:Wait()
+        local humanoid = character:WaitForChild("Humanoid")
+        local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+        -- The animation for the dribble/drive move
+        local animation = Instance.new("Animation")
+        animation.AnimationId = "rbxassetid://125865269944406"  -- Replace with your desired animation ID
+        local animationTrack = humanoid:LoadAnimation(animation)
+
+        -- Set the animation priority to Action to ensure it overrides the idle animation
+        animationTrack.Priority = Enum.AnimationPriority.Action
+
+        -- Sound for the move
+        local sound = Instance.new("Sound")
+        sound.SoundId = ""  -- Change the sound ID
+        sound.Parent = humanoidRootPart  -- You can attach the sound to the character's root part
+
+        -- Function to trigger the ability
+        local function triggerAbility()
+            -- Play the sound at the start of the move
+            sound:Play()
+
+            -- Start the animation immediately with smooth blending
+            animationTrack:Play(0.1, 1, 1)
+
+            -- Stop the animation after 3 seconds
+            task.delay(3, function()
+                animationTrack:Stop(0.1)
+            end)
+        end
+
+        -- Create the GUI button
+        local screenGui = Instance.new("ScreenGui")
+        screenGui.Name = "PlayEmoteGUI"
+        screenGui.Parent = player.PlayerGui
+
+        local button = Instance.new("TextButton")
+        button.Size = UDim2.new(0, 150, 0, 30)
+        button.Position = UDim2.new(0.5, -75, 0.5, -15)
+        button.BackgroundColor3 = Color3.new(0, 0, 0)
+        button.TextColor3 = Color3.new(1, 1, 1)
+        button.Text = "Six Eyes By Zuyi"
+        button.Parent = screenGui
+
+        -- Make the GUI draggable
+        local dragging
+        local dragInput
+        local dragStart
+        local startPos
+
+        local function update(input)
+            local delta = input.Position - dragStart
+            button.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+        end
+
+        button.InputBegan:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+                dragging = true
+                dragStart = input.Position
+                startPos = button.Position
+
+                input.Changed:Connect(function()
+                    if input.UserInputState == Enum.UserInputState.End then
+                        dragging = false
+                    end
+                end)
+            end
+        end)
+
+        button.InputChanged:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+                dragInput = input
+            end
+        end)
+
+        game:GetService("UserInputService").InputChanged:Connect(function(input)
+            if input == dragInput and dragging then
+                update(input)
+            end
+        end)
+
+        -- Listen for the button activation (when clicked)
+        button.MouseButton1Click:Connect(function()
+            -- Trigger the ability when the button is clicked
+            triggerAbility()
+        end)
+    end
+
+    -- Reinitialize the ability each time the character is added (e.g., when joining a match)
+    player.CharacterAdded:Connect(function()
+        cleanup()
+        initializeAbility()
+    end)
+
+    -- Initial cleanup and ability initialization
+    cleanup()
+    if player.Character then
+        initializeAbility()
+    end
+  end
+})
+
+AddButton(AnimeEmotes, {
+  Name = "¥ Ultra Instinct Anime Emote",
+  Callback = function()
+    local player = game.Players.LocalPlayer
+
+    local function cleanup()
+        -- Remove any existing GUI named "PlayEmoteGUI"
+        if player.PlayerGui:FindFirstChild("PlayEmoteGUI") then
+            player.PlayerGui:FindFirstChild("PlayEmoteGUI"):Destroy()
+        end
+    end
+
+    local function initializeAbility()
+        local character = player.Character or player.CharacterAdded:Wait()
+        local humanoid = character:WaitForChild("Humanoid")
+        local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+        -- The animation for the dribble/drive move
+        local animation = Instance.new("Animation")
+        animation.AnimationId = "rbxassetid://80405783743287"  -- Replace with your desired animation ID
+        local animationTrack = humanoid:LoadAnimation(animation)
+
+        -- Set the animation priority to Action to ensure it overrides the idle animation
+        animationTrack.Priority = Enum.AnimationPriority.Action
+
+        -- Sound for the move
+        local sound = Instance.new("Sound")
+        sound.SoundId = ""  -- Change the sound ID
+        sound.Parent = humanoidRootPart  -- You can attach the sound to the character's root part
+
+        -- Function to trigger the ability
+        local function triggerAbility()
+            -- Play the sound at the start of the move
+            sound:Play()
+
+            -- Start the animation immediately with smooth blending
+            animationTrack:Play(0.1, 1, 1)
+
+            -- Stop the animation after 3 seconds
+            task.delay(3, function()
+                animationTrack:Stop(0.1)
+            end)
+        end
+
+        -- Create the GUI button
+        local screenGui = Instance.new("ScreenGui")
+        screenGui.Name = "PlayEmoteGUI"
+        screenGui.Parent = player.PlayerGui
+
+        local button = Instance.new("TextButton")
+        button.Size = UDim2.new(0, 150, 0, 30)
+        button.Position = UDim2.new(0.5, -75, 0.5, -15)
+        button.BackgroundColor3 = Color3.new(0, 0, 0)
+        button.TextColor3 = Color3.new(1, 1, 1)
+        button.Text = "Goku Aura Emote Zuyi"
+        button.Parent = screenGui
+
+        -- Make the GUI draggable
+        local dragging
+        local dragInput
+        local dragStart
+        local startPos
+
+        local function update(input)
+            local delta = input.Position - dragStart
+            button.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+        end
+
+        button.InputBegan:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+                dragging = true
+                dragStart = input.Position
+                startPos = button.Position
+
+                input.Changed:Connect(function()
+                    if input.UserInputState == Enum.UserInputState.End then
+                        dragging = false
+                    end
+                end)
+            end
+        end)
+
+        button.InputChanged:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+                dragInput = input
+            end
+        end)
+
+        game:GetService("UserInputService").InputChanged:Connect(function(input)
+            if input == dragInput and dragging then
+                update(input)
+            end
+        end)
+
+        -- Listen for the button activation (when clicked)
+        button.MouseButton1Click:Connect(function()
+            -- Trigger the ability when the button is clicked
+            triggerAbility()
+        end)
+    end
+
+    -- Reinitialize the ability each time the character is added (e.g., when joining a match)
+    player.CharacterAdded:Connect(function()
+        cleanup()
+        initializeAbility()
+    end)
+
+    -- Initial cleanup and ability initialization
+    cleanup()
+    if player.Character then
+        initializeAbility()
+    end
+  end
+})
+
+AddButton(AnimeEmotes, {
+  Name = "¥ Bizzare Anime Emote",
+  Callback = function()
+    local player = game.Players.LocalPlayer
+
+    local function cleanup()
+        -- Remove any existing GUI named "PlayEmoteGUI"
+        if player.PlayerGui:FindFirstChild("PlayEmoteGUI") then
+            player.PlayerGui:FindFirstChild("PlayEmoteGUI"):Destroy()
+        end
+    end
+
+    local function initializeAbility()
+        local character = player.Character or player.CharacterAdded:Wait()
+        local humanoid = character:WaitForChild("Humanoid")
+        local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+        -- The animation for the dribble/drive move
+        local animation = Instance.new("Animation")
+        animation.AnimationId = "rbxassetid://94252080933749"  -- Replace with your desired animation ID
+        local animationTrack = humanoid:LoadAnimation(animation)
+
+        -- Set the animation priority to Action to ensure it overrides the idle animation
+        animationTrack.Priority = Enum.AnimationPriority.Action
+
+        -- Sound for the move
+        local sound = Instance.new("Sound")
+        sound.SoundId = ""  -- Change the sound ID
+        sound.Parent = humanoidRootPart  -- You can attach the sound to the character's root part
+
+        -- Function to trigger the ability
+        local function triggerAbility()
+            -- Play the sound at the start of the move
+            sound:Play()
+
+            -- Start the animation immediately with smooth blending
+            animationTrack:Play(0.1, 1, 1)
+
+            -- Stop the animation after 3 seconds
+            task.delay(3, function()
+                animationTrack:Stop(0.1)
+            end)
+        end
+
+        -- Create the GUI button
+        local screenGui = Instance.new("ScreenGui")
+        screenGui.Name = "PlayEmoteGUI"
+        screenGui.Parent = player.PlayerGui
+
+        local button = Instance.new("TextButton")
+        button.Size = UDim2.new(0, 150, 0, 30)
+        button.Position = UDim2.new(0.5, -75, 0.5, -15)
+        button.BackgroundColor3 = Color3.new(0, 0, 0)
+        button.TextColor3 = Color3.new(1, 1, 1)
+        button.Text = "Bizzare Emote Zuyi"
+        button.Parent = screenGui
+
+        -- Make the GUI draggable
+        local dragging
+        local dragInput
+        local dragStart
+        local startPos
+
+        local function update(input)
+            local delta = input.Position - dragStart
+            button.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+        end
+
+        button.InputBegan:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+                dragging = true
+                dragStart = input.Position
+                startPos = button.Position
+
+                input.Changed:Connect(function()
+                    if input.UserInputState == Enum.UserInputState.End then
+                        dragging = false
+                    end
+                end)
+            end
+        end)
+
+        button.InputChanged:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+                dragInput = input
+            end
+        end)
+
+        game:GetService("UserInputService").InputChanged:Connect(function(input)
+            if input == dragInput and dragging then
+                update(input)
+            end
+        end)
+
+        -- Listen for the button activation (when clicked)
+        button.MouseButton1Click:Connect(function()
+            -- Trigger the ability when the button is clicked
+            triggerAbility()
+        end)
+    end
+
+    -- Reinitialize the ability each time the character is added (e.g., when joining a match)
+    player.CharacterAdded:Connect(function()
+        cleanup()
+        initializeAbility()
+    end)
+
+    -- Initial cleanup and ability initialization
+    cleanup()
+    if player.Character then
+        initializeAbility()
+    end
+  end
+})
+
+AddButton(AnimeEmotes, {
+  Name = "¥ ROAR Anime Emote",
+  Callback = function()
+    local player = game.Players.LocalPlayer
+
+    local function cleanup()
+        -- Remove any existing GUI named "PlayEmoteGUI"
+        if player.PlayerGui:FindFirstChild("PlayEmoteGUI") then
+            player.PlayerGui:FindFirstChild("PlayEmoteGUI"):Destroy()
+        end
+    end
+
+    local function initializeAbility()
+        local character = player.Character or player.CharacterAdded:Wait()
+        local humanoid = character:WaitForChild("Humanoid")
+        local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+        -- The animation for the dribble/drive move
+        local animation = Instance.new("Animation")
+        animation.AnimationId = "rbxassetid://133572818797711"  -- Replace with your desired animation ID
+        local animationTrack = humanoid:LoadAnimation(animation)
+
+        -- Set the animation priority to Action to ensure it overrides the idle animation
+        animationTrack.Priority = Enum.AnimationPriority.Action
+
+        -- Sound for the move
+        local sound = Instance.new("Sound")
+        sound.SoundId = ""  -- Change the sound ID
+        sound.Parent = humanoidRootPart  -- You can attach the sound to the character's root part
+
+        -- Function to trigger the ability
+        local function triggerAbility()
+            -- Play the sound at the start of the move
+            sound:Play()
+
+            -- Start the animation immediately with smooth blending
+            animationTrack:Play(0.1, 1, 1)
+
+            -- Stop the animation after 3 seconds
+            task.delay(3, function()
+                animationTrack:Stop(0.1)
+            end)
+        end
+
+        -- Create the GUI button
+        local screenGui = Instance.new("ScreenGui")
+        screenGui.Name = "PlayEmoteGUI"
+        screenGui.Parent = player.PlayerGui
+
+        local button = Instance.new("TextButton")
+        button.Size = UDim2.new(0, 150, 0, 30)
+        button.Position = UDim2.new(0.5, -75, 0.5, -15)
+        button.BackgroundColor3 = Color3.new(0, 0, 0)
+        button.TextColor3 = Color3.new(1, 1, 1)
+        button.Text = "ROAR Emote Zuyi"
+        button.Parent = screenGui
+
+        -- Make the GUI draggable
+        local dragging
+        local dragInput
+        local dragStart
+        local startPos
+
+        local function update(input)
+            local delta = input.Position - dragStart
+            button.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+        end
+
+        button.InputBegan:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+                dragging = true
+                dragStart = input.Position
+                startPos = button.Position
+
+                input.Changed:Connect(function()
+                    if input.UserInputState == Enum.UserInputState.End then
+                        dragging = false
+                    end
+                end)
+            end
+        end)
+
+        button.InputChanged:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+                dragInput = input
+            end
+        end)
+
+        game:GetService("UserInputService").InputChanged:Connect(function(input)
+            if input == dragInput and dragging then
+                update(input)
+            end
+        end)
+
+        -- Listen for the button activation (when clicked)
+        button.MouseButton1Click:Connect(function()
+            -- Trigger the ability when the button is clicked
+            triggerAbility()
+        end)
+    end
+
+    -- Reinitialize the ability each time the character is added (e.g., when joining a match)
+    player.CharacterAdded:Connect(function()
+        cleanup()
+        initializeAbility()
+    end)
+
+    -- Initial cleanup and ability initialization
+    cleanup()
+    if player.Character then
+        initializeAbility()
+    end
+  end
+})
+
+AddButton(OtherEmotes, {
+  Name = "¥ Whip Dance Emote",
+  Callback = function()
+    local player = game.Players.LocalPlayer
+
+    local function cleanup()
+        -- Remove any existing GUI named "PlayEmoteGUI"
+        if player.PlayerGui:FindFirstChild("PlayEmoteGUI") then
+            player.PlayerGui:FindFirstChild("PlayEmoteGUI"):Destroy()
+        end
+    end
+
+    local function initializeAbility()
+        local character = player.Character or player.CharacterAdded:Wait()
+        local humanoid = character:WaitForChild("Humanoid")
+        local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+        -- The animation for the dribble/drive move
+        local animation = Instance.new("Animation")
+        animation.AnimationId = "rbxassetid://94649499784710"  -- Replace with your desired animation ID
+        local animationTrack = humanoid:LoadAnimation(animation)
+
+        -- Set the animation priority to Action to ensure it overrides the idle animation
+        animationTrack.Priority = Enum.AnimationPriority.Action
+
+        -- Sound for the move
+        local sound = Instance.new("Sound")
+        sound.SoundId = ""  -- Change the sound ID
+        sound.Parent = humanoidRootPart  -- You can attach the sound to the character's root part
+
+        -- Function to trigger the ability
+        local function triggerAbility()
+            -- Play the sound at the start of the move
+            sound:Play()
+
+            -- Start the animation immediately with smooth blending
+            animationTrack:Play(0.1, 1, 1)
+
+            -- Stop the animation after 3 seconds
+            task.delay(3, function()
+                animationTrack:Stop(0.1)
+            end)
+        end
+
+        -- Create the GUI button
+        local screenGui = Instance.new("ScreenGui")
+        screenGui.Name = "PlayEmoteGUI"
+        screenGui.Parent = player.PlayerGui
+
+        local button = Instance.new("TextButton")
+        button.Size = UDim2.new(0, 150, 0, 30)
+        button.Position = UDim2.new(0.5, -75, 0.5, -15)
+        button.BackgroundColor3 = Color3.new(0, 0, 0)
+        button.TextColor3 = Color3.new(1, 1, 1)
+        button.Text = "Whip Emote Zuyi"
+        button.Parent = screenGui
+
+        -- Make the GUI draggable
+        local dragging
+        local dragInput
+        local dragStart
+        local startPos
+
+        local function update(input)
+            local delta = input.Position - dragStart
+            button.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+        end
+
+        button.InputBegan:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+                dragging = true
+                dragStart = input.Position
+                startPos = button.Position
+
+                input.Changed:Connect(function()
+                    if input.UserInputState == Enum.UserInputState.End then
+                        dragging = false
+                    end
+                end)
+            end
+        end)
+
+        button.InputChanged:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+                dragInput = input
+            end
+        end)
+
+        game:GetService("UserInputService").InputChanged:Connect(function(input)
+            if input == dragInput and dragging then
+                update(input)
+            end
+        end)
+
+        -- Listen for the button activation (when clicked)
+        button.MouseButton1Click:Connect(function()
+            -- Trigger the ability when the button is clicked
+            triggerAbility()
+        end)
+    end
+
+    -- Reinitialize the ability each time the character is added (e.g., when joining a match)
+    player.CharacterAdded:Connect(function()
+        cleanup()
+        initializeAbility()
+    end)
+
+    -- Initial cleanup and ability initialization
+    cleanup()
+    if player.Character then
+        initializeAbility()
+    end
+  end
+})
+
+AddButton(OtherEmotes, {
+  Name = "👅 Rin Quest Emote",
+  Callback = function()
+    local player = game.Players.LocalPlayer
+
+    local function cleanup()
+        -- Remove any existing GUI named "PlayEmoteGUI"
+        if player.PlayerGui:FindFirstChild("PlayEmoteGUI") then
+            player.PlayerGui:FindFirstChild("PlayEmoteGUI"):Destroy()
+        end
+    end
+
+    local function initializeAbility()
+        local character = player.Character or player.CharacterAdded:Wait()
+        local humanoid = character:WaitForChild("Humanoid")
+        local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+        -- The animation for the dribble/drive move
+        local animation = Instance.new("Animation")
+        animation.AnimationId = "rbxassetid://89006553430967"  -- Replace with your desired animation ID
+        local animationTrack = humanoid:LoadAnimation(animation)
+
+        -- Set the animation priority to Action to ensure it overrides the idle animation
+        animationTrack.Priority = Enum.AnimationPriority.Action
+
+        -- Sound for the move
+        local sound = Instance.new("Sound")
+        sound.SoundId = ""  -- Change the sound ID
+        sound.Parent = humanoidRootPart  -- You can attach the sound to the character's root part
+
+        -- Function to trigger the ability
+        local function triggerAbility()
+            -- Play the sound at the start of the move
+            sound:Play()
+
+            -- Start the animation immediately with smooth blending
+            animationTrack:Play(0.1, 1, 1)
+
+            -- Stop the animation after 3 seconds
+            task.delay(3, function()
+                animationTrack:Stop(0.1)
+            end)
+        end
+
+        -- Create the GUI button
+        local screenGui = Instance.new("ScreenGui")
+        screenGui.Name = "PlayEmoteGUI"
+        screenGui.Parent = player.PlayerGui
+
+        local button = Instance.new("TextButton")
+        button.Size = UDim2.new(0, 150, 0, 30)
+        button.Position = UDim2.new(0.5, -75, 0.5, -15)
+        button.BackgroundColor3 = Color3.new(0, 0, 0)
+        button.TextColor3 = Color3.new(1, 1, 1)
+        button.Text = "Rin Emote Zuyi"
+        button.Parent = screenGui
+
+        -- Make the GUI draggable
+        local dragging
+        local dragInput
+        local dragStart
+        local startPos
+
+        local function update(input)
+            local delta = input.Position - dragStart
+            button.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+        end
+
+        button.InputBegan:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+                dragging = true
+                dragStart = input.Position
+                startPos = button.Position
+
+                input.Changed:Connect(function()
+                    if input.UserInputState == Enum.UserInputState.End then
+                        dragging = false
+                    end
+                end)
+            end
+        end)
+
+        button.InputChanged:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+                dragInput = input
+            end
+        end)
+
+        game:GetService("UserInputService").InputChanged:Connect(function(input)
+            if input == dragInput and dragging then
+                update(input)
+            end
+        end)
+
+        -- Listen for the button activation (when clicked)
+        button.MouseButton1Click:Connect(function()
+            -- Trigger the ability when the button is clicked
+            triggerAbility()
+        end)
+    end
+
+    -- Reinitialize the ability each time the character is added (e.g., when joining a match)
+    player.CharacterAdded:Connect(function()
+        cleanup()
+        initializeAbility()
+    end)
+
+    -- Initial cleanup and ability initialization
+    cleanup()
+    if player.Character then
+        initializeAbility()
+    end
+  end
+})
+
+AddButton(OtherEmotes, {
+  Name = "¥ Isagi Kneel Emote",
+  Callback = function()
+    local player = game.Players.LocalPlayer
+
+    local function cleanup()
+        -- Remove any existing GUI named "PlayEmoteGUI"
+        if player.PlayerGui:FindFirstChild("PlayEmoteGUI") then
+            player.PlayerGui:FindFirstChild("PlayEmoteGUI"):Destroy()
+        end
+    end
+
+    local function initializeAbility()
+        local character = player.Character or player.CharacterAdded:Wait()
+        local humanoid = character:WaitForChild("Humanoid")
+        local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+        -- The animation for the dribble/drive move
+        local animation = Instance.new("Animation")
+        animation.AnimationId = "rbxassetid://88982797209625"  -- Replace with your desired animation ID
+        local animationTrack = humanoid:LoadAnimation(animation)
+
+        -- Set the animation priority to Action to ensure it overrides the idle animation
+        animationTrack.Priority = Enum.AnimationPriority.Action
+
+        -- Sound for the move
+        local sound = Instance.new("Sound")
+        sound.SoundId = ""  -- Change the sound ID
+        sound.Parent = humanoidRootPart  -- You can attach the sound to the character's root part
+
+        -- Function to trigger the ability
+        local function triggerAbility()
+            -- Play the sound at the start of the move
+            sound:Play()
+
+            -- Start the animation immediately with smooth blending
+            animationTrack:Play(0.1, 1, 1)
+
+            -- Stop the animation after 3 seconds
+            task.delay(3, function()
+                animationTrack:Stop(0.1)
+            end)
+        end
+
+        -- Create the GUI button
+        local screenGui = Instance.new("ScreenGui")
+        screenGui.Name = "PlayEmoteGUI"
+        screenGui.Parent = player.PlayerGui
+
+        local button = Instance.new("TextButton")
+        button.Size = UDim2.new(0, 150, 0, 30)
+        button.Position = UDim2.new(0.5, -75, 0.5, -15)
+        button.BackgroundColor3 = Color3.new(0, 0, 0)
+        button.TextColor3 = Color3.new(1, 1, 1)
+        button.Text = "Kneel Emote Zuyi"
+        button.Parent = screenGui
+
+        -- Make the GUI draggable
+        local dragging
+        local dragInput
+        local dragStart
+        local startPos
+
+        local function update(input)
+            local delta = input.Position - dragStart
+            button.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+        end
+
+        button.InputBegan:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+                dragging = true
+                dragStart = input.Position
+                startPos = button.Position
+
+                input.Changed:Connect(function()
+                    if input.UserInputState == Enum.UserInputState.End then
+                        dragging = false
+                    end
+                end)
+            end
+        end)
+
+        button.InputChanged:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+                dragInput = input
+            end
+        end)
+
+        game:GetService("UserInputService").InputChanged:Connect(function(input)
+            if input == dragInput and dragging then
+                update(input)
+            end
+        end)
+
+        -- Listen for the button activation (when clicked)
+        button.MouseButton1Click:Connect(function()
+            -- Trigger the ability when the button is clicked
+            triggerAbility()
+        end)
+    end
+
+    -- Reinitialize the ability each time the character is added (e.g., when joining a match)
+    player.CharacterAdded:Connect(function()
+        cleanup()
+        initializeAbility()
+    end)
+
+    -- Initial cleanup and ability initialization
+    cleanup()
+    if player.Character then
+        initializeAbility()
+    end
+  end
+})
+
+AddButton(OtherEmotes, {
+  Name = "¥ Grillz Paid Emote",
+  Callback = function()
+    local player = game.Players.LocalPlayer
+
+    local function cleanup()
+        -- Remove any existing GUI named "PlayEmoteGUI"
+        if player.PlayerGui:FindFirstChild("PlayEmoteGUI") then
+            player.PlayerGui:FindFirstChild("PlayEmoteGUI"):Destroy()
+        end
+    end
+
+    local function initializeAbility()
+        local character = player.Character or player.CharacterAdded:Wait()
+        local humanoid = character:WaitForChild("Humanoid")
+        local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+        -- The animation for the dribble/drive move
+        local animation = Instance.new("Animation")
+        animation.AnimationId = "rbxassetid://111955433756506"  -- Replace with your desired animation ID
+        local animationTrack = humanoid:LoadAnimation(animation)
+
+        -- Set the animation priority to Action to ensure it overrides the idle animation
+        animationTrack.Priority = Enum.AnimationPriority.Action
+
+        -- Sound for the move
+        local sound = Instance.new("Sound")
+        sound.SoundId = ""  -- Change the sound ID
+        sound.Parent = humanoidRootPart  -- You can attach the sound to the character's root part
+
+        -- Function to trigger the ability
+        local function triggerAbility()
+            -- Play the sound at the start of the move
+            sound:Play()
+
+            -- Start the animation immediately with smooth blending
+            animationTrack:Play(0.1, 1, 1)
+
+            -- Stop the animation after 3 seconds
+            task.delay(3, function()
+                animationTrack:Stop(0.1)
+            end)
+        end
+
+        -- Create the GUI button
+        local screenGui = Instance.new("ScreenGui")
+        screenGui.Name = "PlayEmoteGUI"
+        screenGui.Parent = player.PlayerGui
+
+        local button = Instance.new("TextButton")
+        button.Size = UDim2.new(0, 150, 0, 30)
+        button.Position = UDim2.new(0.5, -75, 0.5, -15)
+        button.BackgroundColor3 = Color3.new(0, 0, 0)
+        button.TextColor3 = Color3.new(1, 1, 1)
+        button.Text = "Grillz Emote Zuyi"
+        button.Parent = screenGui
+
+        -- Make the GUI draggable
+        local dragging
+        local dragInput
+        local dragStart
+        local startPos
+
+        local function update(input)
+            local delta = input.Position - dragStart
+            button.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+        end
+
+        button.InputBegan:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+                dragging = true
+                dragStart = input.Position
+                startPos = button.Position
+
+                input.Changed:Connect(function()
+                    if input.UserInputState == Enum.UserInputState.End then
+                        dragging = false
+                    end
+                end)
+            end
+        end)
+
+        button.InputChanged:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+                dragInput = input
+            end
+        end)
+
+        game:GetService("UserInputService").InputChanged:Connect(function(input)
+            if input == dragInput and dragging then
+                update(input)
+            end
+        end)
+
+        -- Listen for the button activation (when clicked)
+        button.MouseButton1Click:Connect(function()
+            -- Trigger the ability when the button is clicked
+            triggerAbility()
+        end)
+    end
+
+    -- Reinitialize the ability each time the character is added (e.g., when joining a match)
+    player.CharacterAdded:Connect(function()
+        cleanup()
+        initializeAbility()
+    end)
+
+    -- Initial cleanup and ability initialization
+    cleanup()
+    if player.Character then
+        initializeAbility()
+    end
+  end
+})
+
+AddButton(OtherEmotes, {
+  Name = "¥ Gentleman Emote",
+  Callback = function()
+    local player = game.Players.LocalPlayer
+
+    local function cleanup()
+        -- Remove any existing GUI named "PlayEmoteGUI"
+        if player.PlayerGui:FindFirstChild("PlayEmoteGUI") then
+            player.PlayerGui:FindFirstChild("PlayEmoteGUI"):Destroy()
+        end
+    end
+
+    local function initializeAbility()
+        local character = player.Character or player.CharacterAdded:Wait()
+        local humanoid = character:WaitForChild("Humanoid")
+        local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+        -- The animation for the dribble/drive move
+        local animation = Instance.new("Animation")
+        animation.AnimationId = "rbxassetid://96723009482766"  -- Replace with your desired animation ID
+        local animationTrack = humanoid:LoadAnimation(animation)
+
+        -- Set the animation priority to Action to ensure it overrides the idle animation
+        animationTrack.Priority = Enum.AnimationPriority.Action
+
+        -- Sound for the move
+        local sound = Instance.new("Sound")
+        sound.SoundId = ""  -- Change the sound ID
+        sound.Parent = humanoidRootPart  -- You can attach the sound to the character's root part
+
+        -- Function to trigger the ability
+        local function triggerAbility()
+            -- Play the sound at the start of the move
+            sound:Play()
+
+            -- Start the animation immediately with smooth blending
+            animationTrack:Play(0.1, 1, 1)
+
+            -- Stop the animation after 3 seconds
+            task.delay(3, function()
+                animationTrack:Stop(0.1)
+            end)
+        end
+
+        -- Create the GUI button
+        local screenGui = Instance.new("ScreenGui")
+        screenGui.Name = "PlayEmoteGUI"
+        screenGui.Parent = player.PlayerGui
+
+        local button = Instance.new("TextButton")
+        button.Size = UDim2.new(0, 150, 0, 30)
+        button.Position = UDim2.new(0.5, -75, 0.5, -15)
+        button.BackgroundColor3 = Color3.new(0, 0, 0)
+        button.TextColor3 = Color3.new(1, 1, 1)
+        button.Text = "Gentleman Emote Zuyi"
+        button.Parent = screenGui
+
+        -- Make the GUI draggable
+        local dragging
+        local dragInput
+        local dragStart
+        local startPos
+
+        local function update(input)
+            local delta = input.Position - dragStart
+            button.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+        end
+
+        button.InputBegan:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+                dragging = true
+                dragStart = input.Position
+                startPos = button.Position
+
+                input.Changed:Connect(function()
+                    if input.UserInputState == Enum.UserInputState.End then
+                        dragging = false
+                    end
+                end)
+            end
+        end)
+
+        button.InputChanged:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+                dragInput = input
+            end
+        end)
+
+        game:GetService("UserInputService").InputChanged:Connect(function(input)
+            if input == dragInput and dragging then
+                update(input)
+            end
+        end)
+
+        -- Listen for the button activation (when clicked)
+        button.MouseButton1Click:Connect(function()
+            -- Trigger the ability when the button is clicked
+            triggerAbility()
+        end)
+    end
+
+    -- Reinitialize the ability each time the character is added (e.g., when joining a match)
+    player.CharacterAdded:Connect(function()
+        cleanup()
+        initializeAbility()
+    end)
+
+    -- Initial cleanup and ability initialization
+    cleanup()
+    if player.Character then
+        initializeAbility()
+    end
+  end
+})
+
+AddButton(OtherEmotes, {
+  Name = "¥ Cry Loser Paid Emote",
+  Callback = function()
+    local player = game.Players.LocalPlayer
+
+    local function cleanup()
+        -- Remove any existing GUI named "PlayEmoteGUI"
+        if player.PlayerGui:FindFirstChild("PlayEmoteGUI") then
+            player.PlayerGui:FindFirstChild("PlayEmoteGUI"):Destroy()
+        end
+    end
+
+    local function initializeAbility()
+        local character = player.Character or player.CharacterAdded:Wait()
+        local humanoid = character:WaitForChild("Humanoid")
+        local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+        -- The animation for the dribble/drive move
+        local animation = Instance.new("Animation")
+        animation.AnimationId = "rbxassetid://97771700408539"  -- Replace with your desired animation ID
+        local animationTrack = humanoid:LoadAnimation(animation)
+
+        -- Set the animation priority to Action to ensure it overrides the idle animation
+        animationTrack.Priority = Enum.AnimationPriority.Action
+
+        -- Sound for the move
+        local sound = Instance.new("Sound")
+        sound.SoundId = ""  -- Change the sound ID
+        sound.Parent = humanoidRootPart  -- You can attach the sound to the character's root part
+
+        -- Function to trigger the ability
+        local function triggerAbility()
+            -- Play the sound at the start of the move
+            sound:Play()
+
+            -- Start the animation immediately with smooth blending
+            animationTrack:Play(0.1, 1, 1)
+
+            -- Stop the animation after 3 seconds
+            task.delay(3, function()
+                animationTrack:Stop(0.1)
+            end)
+        end
+
+        -- Create the GUI button
+        local screenGui = Instance.new("ScreenGui")
+        screenGui.Name = "PlayEmoteGUI"
+        screenGui.Parent = player.PlayerGui
+
+        local button = Instance.new("TextButton")
+        button.Size = UDim2.new(0, 150, 0, 30)
+        button.Position = UDim2.new(0.5, -75, 0.5, -15)
+        button.BackgroundColor3 = Color3.new(0, 0, 0)
+        button.TextColor3 = Color3.new(1, 1, 1)
+        button.Text = "Cry Emote Zuyi"
+        button.Parent = screenGui
+
+        -- Make the GUI draggable
+        local dragging
+        local dragInput
+        local dragStart
+        local startPos
+
+        local function update(input)
+            local delta = input.Position - dragStart
+            button.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+        end
+
+        button.InputBegan:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+                dragging = true
+                dragStart = input.Position
+                startPos = button.Position
+
+                input.Changed:Connect(function()
+                    if input.UserInputState == Enum.UserInputState.End then
+                        dragging = false
+                    end
+                end)
+            end
+        end)
+
+        button.InputChanged:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+                dragInput = input
+            end
+        end)
+
+        game:GetService("UserInputService").InputChanged:Connect(function(input)
+            if input == dragInput and dragging then
+                update(input)
+            end
+        end)
+
+        -- Listen for the button activation (when clicked)
+        button.MouseButton1Click:Connect(function()
+            -- Trigger the ability when the button is clicked
+            triggerAbility()
+        end)
+    end
+
+    -- Reinitialize the ability each time the character is added (e.g., when joining a match)
+    player.CharacterAdded:Connect(function()
+        cleanup()
+        initializeAbility()
+    end)
+
+    -- Initial cleanup and ability initialization
+    cleanup()
+    if player.Character then
+        initializeAbility()
+    end
+  end
+})
+
+AddButton(OtherEmotes, {
+  Name = "⚠️‼️ZUYI SPECIAL EMOTE‼️⚠️",
+  Callback = function()
+    local player = game.Players.LocalPlayer
+
+    local function cleanup()
+        -- Remove any existing GUI named "PlayEmoteGUI"
+        if player.PlayerGui:FindFirstChild("PlayEmoteGUI") then
+            player.PlayerGui:FindFirstChild("PlayEmoteGUI"):Destroy()
+        end
+    end
+
+    local function initializeAbility()
+        local character = player.Character or player.CharacterAdded:Wait()
+        local humanoid = character:WaitForChild("Humanoid")
+        local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+        -- The animation for the dribble/drive move
+        local animation = Instance.new("Animation")
+        animation.AnimationId = "rbxassetid://85217612132841"  -- Replace with your desired animation ID
+        local animationTrack = humanoid:LoadAnimation(animation)
+
+        -- Set the animation priority to Action to ensure it overrides the idle animation
+        animationTrack.Priority = Enum.AnimationPriority.Action
+
+        -- Sound for the move
+        local sound = Instance.new("Sound")
+        sound.SoundId = ""  -- Change the sound ID
+        sound.Parent = humanoidRootPart  -- You can attach the sound to the character's root part
+
+        -- Function to trigger the ability
+        local function triggerAbility()
+            -- Play the sound at the start of the move
+            sound:Play()
+
+            -- Start the animation immediately with smooth blending
+            animationTrack:Play(0.1, 1, 1)
+
+            -- Stop the animation after 3 seconds
+            task.delay(3, function()
+                animationTrack:Stop(0.1)
+            end)
+        end
+
+        -- Create the GUI button
+        local screenGui = Instance.new("ScreenGui")
+        screenGui.Name = "PlayEmoteGUI"
+        screenGui.Parent = player.PlayerGui
+
+        local button = Instance.new("TextButton")
+        button.Size = UDim2.new(0, 150, 0, 30)
+        button.Position = UDim2.new(0.5, -75, 0.5, -15)
+        button.BackgroundColor3 = Color3.new(0, 0, 0)
+        button.TextColor3 = Color3.new(1, 1, 1)
+        button.Text = "Zuyi Special Emote"
+        button.Parent = screenGui
+
+        -- Make the GUI draggable
+        local dragging
+        local dragInput
+        local dragStart
+        local startPos
+
+        local function update(input)
+            local delta = input.Position - dragStart
+            button.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+        end
+
+        button.InputBegan:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch then
+                dragging = true
+                dragStart = input.Position
+                startPos = button.Position
+
+                input.Changed:Connect(function()
+                    if input.UserInputState == Enum.UserInputState.End then
+                        dragging = false
+                    end
+                end)
+            end
+        end)
+
+        button.InputChanged:Connect(function(input)
+            if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+                dragInput = input
+            end
+        end)
+
+        game:GetService("UserInputService").InputChanged:Connect(function(input)
+            if input == dragInput and dragging then
+                update(input)
+            end
+        end)
+
+        -- Listen for the button activation (when clicked)
+        button.MouseButton1Click:Connect(function()
+            -- Trigger the ability when the button is clicked
+            triggerAbility()
+        end)
+    end
+
+    -- Reinitialize the ability each time the character is added (e.g., when joining a match)
+    player.CharacterAdded:Connect(function()
+        cleanup()
+        initializeAbility()
+    end)
+
+    -- Initial cleanup and ability initialization
+    cleanup()
+    if player.Character then
+        initializeAbility()
+    end
+  end
+})

@@ -296,9 +296,10 @@ local function CreateEmoteButton(player, animationId, buttonText)
         local animationTrack = humanoid:LoadAnimation(animation)
         animationTrack.Priority = Enum.AnimationPriority.Action
 
-        local sound = Instance.new("Sound")
-        sound.SoundId = "" -- Thêm Sound ID nếu muốn
-        sound.Parent = humanoidRootPart
+local sound = Instance.new("Sound")
+sound.SoundId = "rbxassetid://8797756460"
+sound.Volume = 1
+sound.Parent = humanoidRootPart
 
         local function triggerAbility()
             sound:Play()
